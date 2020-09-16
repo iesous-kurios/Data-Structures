@@ -76,11 +76,18 @@ class LinkedList:
                 self.count = 0
 
             else:
-                self.tail = self.head.get_next_node()
-                self.count -= 1
+                current = self.head
 
-            return ret_value
+                if current.get_next_node() is not self.tail:
+                    current = current.get_next_node()
 
+                else:
+                    self.tail = current
+
+                    self.tail.set_next_node(None)
+                    self.count -= 1
+
+        return ret_value
     
 
     def contains(self, value):
