@@ -2,6 +2,8 @@
 Node class to keep track of
 the data internal to individual nodes
 """
+
+# small change to create pull request
 class Node:
     def __init__(self, key):
         self.key = key
